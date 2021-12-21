@@ -8,11 +8,13 @@ import Ourstack from "./screen/ourstack";
 import Contact from "./screen/contact";
 
 const App = () => {
+
   return (
     <>
       <Index />
       <Txtpage />
       <Samples />
+      {/** 여기부터 가로스크롤 */}
       <Ourstack />
       <Contact />
     </>
