@@ -1,0 +1,30 @@
+
+.contactarea {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-color:#ef9a9a;
+}
+.indexarea {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-color:#ce93d8;
+}
+.ourstackarea {
+    flex-direction: row;
+    height: 100vh;
+    background-color:#393cf1;
+}
+.samplesarea { 
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-color:#39f1c9;
+}
+.txtpagearea {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-color:#f139a4;
+}
