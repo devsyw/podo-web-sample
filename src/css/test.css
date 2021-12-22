@@ -6,22 +6,27 @@ html, body {
 }
 
 .contactarea {
+    width: 100vw;
     height: 100vh;
     background-color:#ef9a9a;
 }
 .indexarea {
+    width: 100vw;
     height: 100vh;
     background-color:#ce93d8;
 }
 .ourstackarea {
+    width: 100vw;
     height: 100vh;
     background-color:#393cf1;
 }
 .samplesarea { 
+    width: 100vw;
     height: 100vh;
     background-color:#39f1c9;
 }
 .txtpagearea {
+    width: 100vw;
     height: 100vh;
     background-color:#f139a4;
 }

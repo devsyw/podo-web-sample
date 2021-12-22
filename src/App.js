@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './css/test.css'
+import { useHorizontalScroll } from "./common/useSideScroll";
 
 import ScrollHorizontal from 'react-scroll-horizontal';
 
@@ -9,10 +10,14 @@ import Samples from "./screen/samples";
 import Ourstack from "./screen/ourstack";
 import Contact from "./screen/contact";
 
+
 const App = () => {
+  /** 스크롤 컨트롤 ref객체 */
+  const scrollRef = useHorizontalScroll();
+
   /** 스크롤 위치저장 상태 */
   const [scrollY, setScrollY] = useState(0);
-  
+
   /** 화면 세로영역 크기, state로 저장하면 리렌더되기때문에 변수저장 */
   let nowScreenHeightSize = window.innerHeight;
 
@@ -49,23 +54,23 @@ const App = () => {
     return () => {
       window.removeEventListener('scroll', handleFollow);
     }
-  }, [])
+  })
 
   return (
     !turnScroll ? 
-      <>
-        <Index />
-        <Txtpage />
-        <Samples />
-      </>
+        <>
+          <Index />
+          <Txtpage />
+          <Samples />
+        </>
       : 
-      // <div id='scroll-horizontal' style={{ height: `100em` }}>
+        // <div ref={scrollRef} style={{ overflow: "auto" }}>
+        //   <div style={{ whiteSpace: "nowrap" }}>
         <ScrollHorizontal>
           <Samples />
           <Ourstack />
           <Contact />
         </ScrollHorizontal>
-      // </div>
   );
 }
 
