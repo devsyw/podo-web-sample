@@ -25,3 +25,9 @@ html, body {
     height: 100vh;
     background-color:#f139a4;
 }
+
+#scroll-horizontal .scroll-horizontal > div {
+    display: grid !important;
+    /* grid-template-rows : auto auto;
+    grid-auto-flow: column;//??ㅇ왜 */
+  }
