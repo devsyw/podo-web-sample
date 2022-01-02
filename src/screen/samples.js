@@ -4,7 +4,11 @@ import '../css/test.css';
 const Samples = () => {
   return (
     <div className="samplesarea">
-      <h1>samplesarea</h1>
+      <ul className="list">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
     </div>
   );
 }
