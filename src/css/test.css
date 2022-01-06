@@ -37,9 +37,8 @@ h1 {
 .txtpagearea {
     width: 100%;
     height: 100vh;
-    background-color:#f139a4;
+    display: flex;
 }
-
 .list {
     margin: 0;
     padding: 0;
@@ -49,10 +48,9 @@ h1 {
 }
 
 .list > li {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgb(54, 121, 189);
 }
 .list > li:nth-child(1) {
     left: 0;
@@ -69,3 +67,48 @@ h1 {
     top: 0;
     background-color: #000;
 }
+
+/* 영우 코드 */
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+.bg {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    height: 300vh;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.bg1 {
+    background: url(../assets/bg1.jpg) no-repeat;
+}
+.box1 {
+    width: 500px;
+    height: 700px;
+    margin-top: 400px;
+    margin-left: 10%;
+    background-color:#f139a4;
+}
+.box2 {
+    width: 500px;
+    height: 700px;
+    margin-left: 10%;
+    margin-top: 1500px;
+    background-color:#39f19b;
+}
+.box3 {
+    width: 500px;
+    height: 700px;
+    margin-top: 2500px;
+    margin-left: 10%;
+    background-color:#6139f1;
+}
+
+.active-scroll-spy {
+    background-color: yellowgreen;
+    border-radius: 15px;
+  }

@@ -1,11 +1,15 @@
 import React from "react";
 import '../css/test.css';
 
-const Samples = () => {
+const Samples = ({scrollMode}) => {
+
   return (
     <div className="samplesarea">
       <ul className="list">
-        <li></li>
+        <li>
+
+
+        </li>
         <li></li>
         <li></li>
       </ul>
