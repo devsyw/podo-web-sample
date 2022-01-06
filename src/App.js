@@ -46,27 +46,28 @@ const App = () => {
     }
   }
 
-  return (
-    <FullPage controls className="wrapper">
-      <Slide>
-        <Index id="first"/>
-      </Slide>
-
-      <Txtpage id="second" position={scrollY}/>
-
-      <Slide>
-        <Samples id="third" status={scrollMode}/>
-      </Slide>
-    </FullPage>
-  );
-
+  // //요넘 주석풀고 사용
   // return (
-  //   <div className="wrapper">
-  //     <Index id="first"/>
+  //   <FullPage controls className="wrapper">
+  //     <Slide>
+  //       <Index id="first"/>
+  //     </Slide>
+
   //     <Txtpage id="second" position={scrollY}/>
-  //     <Samples id="third" status={scrollMode}/>
-  //   </div>
+
+  //     <Slide>
+  //       <Samples id="third" status={scrollMode}/>
+  //     </Slide>
+  //   </FullPage>
   // );
+
+  return (
+    <div className="wrapper">
+      <Index/>
+      <Txtpage position={scrollY}/>
+      <Samples status={scrollMode}/>
+    </div>
+  );
 }
 
 export default App;
