@@ -6,14 +6,14 @@ const Txtpage = ({position}) => {
   let sizeRow = window.innerHeight;
 
   useEffect(()=>{
-    console.log(position - sizeRow)
+    console.log(position)
   }, [position])
 
   return (
     <div 
       className="bg bg1"
       style={{
-        //backgroundPositionY: position - sizeRow
+        backgroundPositionY: position - sizeRow
       }}
     >
       <div className="box1"></div>
