@@ -12,41 +12,40 @@ import Page5 from "./screen/page5";
 import Page6 from "./screen/page6";
 
 const App = () => {
-  /** 스크롤 위치저장 상태 */
-  const [page, setPage] = useState(0);
-  let savePage = 0;
+  /** 마우스 휠 움직일때마다 실행 */
+  useEffect(() => {
+    const mouseUp = () => {
+      window.addEventListener("wheel", handleDocumentMouseUp);
+    }
+    mouseUp();
+    return () => {
+      window.removeEventListener('wheel', handleDocumentMouseUp);
+    }
+  }, [])
 
-  /** 스크롤 움직일때마다 실행 */
-  // useEffect(() => {
-  //   const mouseUp = () => {
-  //     window.addEventListener("wheel", handleDocumentMouseUp);
-  //   }
+  /** 마우스 업/다운 */
+  const handleDocumentMouseUp = (e) => {
+    let ySet = 0;
+    let pageNum = window.scrollY / window.innerHeight;
 
-  //   mouseUp();
-  //   return () => {
-  //     window.removeEventListener('wheel', handleDocumentMouseUp);
-  //   }
-  // }, [])
+    //이전 페이지 이동
+    if(e.deltaY <= 0) {
+      ySet = Math.floor(pageNum) * window.innerHeight;
+      return window.scrollTo({top:ySet, behavior:'smooth'});
 
-  // /** 마우스 업 */
-  // const handleDocumentMouseUp = (e) => {
-  //   if(e.deltaY < 0) {
-  //     console.log('뒤로가!');
-  //     setPageY(page - 1);
-  //     setPage(page - 1)
-  //   } else if(e.deltaY > 0){
-  //     console.log('앞으로가!');
-  //     setPageY(page + 1);
-  //     setPage(page + 1)
-  //   }
-  // }
+    //뒤 페이지 이동
+    } else if(e.deltaY >= 0){
+      ySet = Math.ceil(pageNum) * window.innerHeight;
+      return window.scrollTo({top:ySet, behavior:'smooth'});
 
+    }
+  }
+
+  /** 페이지 이동 0~5페이지 */
   const setPageY = (count) => {
     let ySet = window.innerHeight * count;
-    console.log(page)
     return window.scrollTo({top:ySet, behavior:'smooth'});
   }
-  
 
   return (
     <html>
