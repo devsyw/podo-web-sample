@@ -17,15 +17,20 @@ const App = () => {
   return (
     <html>
       <body>
-        {/* <header className="header">
+        <header className="header">
           <a className="logo"></a>
           <div className="menu-list">
+            <div onClick={()=>{}}>화면 1</div>
+            <div onClick={()=>{}}>화면 2</div>
+            <div onClick={()=>{}}>화면 3</div>
+            <div onClick={()=>{}}>화면 4</div>
+            <div onClick={()=>{}}>화면 5</div>
+            <div onClick={()=>{}}>화면 6</div>
           </div>
-        </header> */}
+        </header>
 
         <main>
-          {/* 슬라이드 네비게이션 css */}
-          <FullPage controls controlsProps={{className: 'slide-navigation'}}> 
+          <FullPage controls>
             <Slide>
               <Page1/>
             </Slide>

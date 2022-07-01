@@ -11,6 +11,41 @@ h2 {font-size: 60px;font-weight: bold;line-height: 1;}
 
 .header {position: absolute;top: 0;height: 70px;text-align: right;background-color:rgba(0, 0, 0, .5);width: 100%;z-index: 99;}
 
+/* 풀페이지 네비게이션 시작 */
+.slide-navigation button:nth-child(1) {
+    display: none;
+  }
+  
+.slide-navigation button:nth-last-child(1) {
+    display: none;
+}
+
+.slide-navigation button {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 5px;
+    height: 15px;
+    margin: 0 5px;
+    font-size: 0px;
+    cursor: pointer;
+}
+
+.slide-navigation {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0px;
+    z-index: 5;
+}
+
+.slide-navigation button:disabled {
+    background-color: black;
+    border: 1px solid white;
+}
+/* 풀페이지 네비게이션 끝 */
+
 .menu-list div {display: inline-block;width: auto;font-size: 14px;color: #fff;padding: 25px 15px;cursor: pointer;}
 
 [class*='container'] {
